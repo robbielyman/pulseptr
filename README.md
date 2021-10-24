@@ -2,7 +2,7 @@
 
 Author: Rylee Alanza Lyman
 
-PTR variable width pulse wave oscillator
+PTR variable width pulse wave oscillator.  
 SC port of Gen code by Peter McCulloch
 
 ### Usage
