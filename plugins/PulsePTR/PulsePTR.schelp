@@ -1,26 +1,27 @@
 class:: PulsePTR
 summary:: PTR variable width pulse wave oscillator
-related:: TODO
-categories:: UGens>TODO
+related:: Classes/Pulse
+categories:: UGens
 
 description::
 
 PTR variable width pulse wave oscillator
+SC port of Gen algorithm by Peter McCulloch
 
 
 classmethods::
 
 method::ar, kr
 
-argument::TODO
+argument::freq, phase, sync, width
 
-argument::TODO
+argument::freq, phase, sync, width
 
 
 examples::
 
 code::
 
-{ PulsePTR.ar(/* TODO */) }.play
+{ PulsePTR.ar(freq:440.0)[0] }.play
 
 ::

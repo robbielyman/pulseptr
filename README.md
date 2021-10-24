@@ -3,6 +3,15 @@
 Author: Rylee Alanza Lyman
 
 PTR variable width pulse wave oscillator
+SC port of Gen code by Peter McCulloch
+
+### Usage
+
+```supercollider
+{ PulsePTR.ar(freq:440)[0].dup }.play
+```
+
+Note the `[0]`: PulsePTR has two channels of output, the second being designed to feed into the `sync` input of another PulsePTR oscillator.
 
 ### Requirements
 
