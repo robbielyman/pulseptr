@@ -1,0 +1,26 @@
+class:: PulsePTR
+summary:: PTR variable width pulse wave oscillator
+related:: TODO
+categories:: UGens>TODO
+
+description::
+
+PTR variable width pulse wave oscillator
+
+
+classmethods::
+
+method::ar, kr
+
+argument::TODO
+
+argument::TODO
+
+
+examples::
+
+code::
+
+{ PulsePTR.ar(/* TODO */) }.play
+
+::
