@@ -113,7 +113,7 @@ void PulsePTR::next_aaaa(int nSamples) {
         double step2    = 2.f*step;
         double step3    = 3.f*step;
         double samples  = 1.f / step;
-        double w        = std::clamp(width[i], 0.01f, 0.99f);
+        double w        = width[i] < 0.01f ? 0.01f : width[i] > 0.99f ? 0.99f : width[i];
         double p2       = samples * samples / 2.f;
         double p3       = samples * samples * samples / 6.f;
         double out1     = 0.f;
@@ -155,7 +155,7 @@ void PulsePTR::next_aaak(int nSamples) {
     double rateinv  = 1 / sampleRate();
     double phasein  = mPhaseIn;
     double lastsync = mSync;
-    double w        = std::clamp(width, 0.01f, 0.99f);
+    double w        = width < 0.01f ? 0.01f : width > 0.99f ? 0.99f : width;
     for (int i = 0; i < nSamples; ++i) {
         double step     = freq[i] * rateinv;
         double step2    = 2.f*step;
@@ -207,7 +207,7 @@ void PulsePTR::next_aaka(int nSamples) {
         double step2    = 2.f*step;
         double step3    = 3.f*step;
         double samples  = 1.f / step;
-        double w        = std::clamp(width[i], 0.01f, 0.99f);
+        double w        = width[i] < 0.01f ? 0.01f : width[i] > 0.99f ? 0.99f : width[i];
         double p2       = samples * samples / 2.f;
         double p3       = samples * samples * samples / 6.f;
         double out1     = 0.f;
@@ -249,7 +249,7 @@ void PulsePTR::next_aakk(int nSamples) {
     double rateinv  = 1 / sampleRate();
     double phasein  = mPhaseIn;
     double lastsync = mSync;
-    double w        = std::clamp(width, 0.01f, 0.99f);
+    double w        = width < 0.01f ? 0.01f : width > 0.99f ? 0.99f : width;
     for (int i = 0; i < nSamples; ++i) {
         double step     = freq[i] * rateinv;
         double step2    = 2.f*step;
@@ -301,7 +301,7 @@ void PulsePTR::next_akaa(int nSamples) {
         double step2    = 2.f*step;
         double step3    = 3.f*step;
         double samples  = 1.f / step;
-        double w        = std::clamp(width[i], 0.01f, 0.99f);
+        double w        = width[i] < 0.01f ? 0.01f : width[i] > 0.99f ? 0.99f : width[i];
         double p2       = samples * samples / 2.f;
         double p3       = samples * samples * samples / 6.f;
         double out1     = 0.f;
@@ -343,7 +343,7 @@ void PulsePTR::next_akak(int nSamples) {
     double rateinv  = 1 / sampleRate();
     double phasein  = mPhaseIn;
     double lastsync = mSync;
-    double w        = std::clamp(width, 0.01f, 0.99f);
+    double w        = width < 0.01f ? 0.01f : width > 0.99f ? 0.99f : width;
     for (int i = 0; i < nSamples; ++i) {
         double step     = freq[i] * rateinv;
         double step2    = 2.f*step;
@@ -395,7 +395,7 @@ void PulsePTR::next_akka(int nSamples) {
         double step2    = 2.f*step;
         double step3    = 3.f*step;
         double samples  = 1.f / step;
-        double w        = std::clamp(width[i], 0.01f, 0.99f);
+        double w        = width[i] < 0.01f ? 0.01f : width[i] > 0.99f ? 0.99f : width[i];
         double p2       = samples * samples / 2.f;
         double p3       = samples * samples * samples / 6.f;
         double out1     = 0.f;
@@ -437,7 +437,7 @@ void PulsePTR::next_akkk(int nSamples) {
     double rateinv  = 1 / sampleRate();
     double phasein  = mPhaseIn;
     double lastsync = mSync;
-    double w        = std::clamp(width, 0.01f, 0.99f);
+    double w        = width < 0.01f ? 0.01f : width > 0.99f ? 0.99f : width;
     for (int i = 0; i < nSamples; ++i) {
         double step     = freq[i] * rateinv;
         double step2    = 2.f*step;
@@ -491,7 +491,7 @@ void PulsePTR::next_kaaa(int nSamples) {
     double p2       = samples * samples / 2.f;
     double p3       = samples * samples * samples / 6.f;
     for (int i = 0; i < nSamples; ++i) {
-        double w        = std::clamp(width[i], 0.01f, 0.99f);
+        double w        = width[i] < 0.01f ? 0.01f : width[i] > 0.99f ? 0.99f : width[i];
         double out1     = 0.f;
         double out2     = 0.f;
         if (sync[i] > 0.f && lastsync == 0.f) {
@@ -531,7 +531,7 @@ void PulsePTR::next_kaak(int nSamples) {
     double rateinv  = 1 / sampleRate();
     double phasein  = mPhaseIn;
     double lastsync = mSync;
-    double w        = std::clamp(width, 0.01f, 0.99f);
+    double w        = width < 0.01f ? 0.01f : width > 0.99f ? 0.99f : width;
     double step     = freq * rateinv;
     double step2    = 2.f*step;
     double step3    = 3.f*step;
@@ -585,7 +585,7 @@ void PulsePTR::next_kaka(int nSamples) {
     double p2       = samples * samples / 2.f;
     double p3       = samples * samples * samples / 6.f;
     for (int i = 0; i < nSamples; ++i) {
-        double w        = std::clamp(width[i], 0.01f, 0.99f);
+        double w        = width[i] < 0.01f ? 0.01f : width[i] > 0.99f ? 0.99f : width[i];
         double out1     = 0.f;
         double out2     = 0.f;
         if (sync > 0.f && lastsync == 0.f) {
@@ -625,7 +625,7 @@ void PulsePTR::next_kakk(int nSamples) {
     double rateinv  = 1 / sampleRate();
     double phasein  = mPhaseIn;
     double lastsync = mSync;
-    double w        = std::clamp(width, 0.01f, 0.99f);
+    double w        = width < 0.01f ? 0.01f : width > 0.99f ? 0.99f : width;
     double step     = freq * rateinv;
     double step2    = 2.f*step;
     double step3    = 3.f*step;
@@ -679,7 +679,7 @@ void PulsePTR::next_kkaa(int nSamples) {
     double p2       = samples * samples / 2.f;
     double p3       = samples * samples * samples / 6.f;
     for (int i = 0; i < nSamples; ++i) {
-        double w        = std::clamp(width[i], 0.01f, 0.99f);
+        double w        = width[i] < 0.01f ? 0.01f : width[i] > 0.99f ? 0.99f : width[i];
         double out1     = 0.f;
         double out2     = 0.f;
         if (sync[i] > 0.f && lastsync == 0.f) {
@@ -719,7 +719,7 @@ void PulsePTR::next_kkak(int nSamples) {
     double rateinv  = 1 / sampleRate();
     double phasein  = mPhaseIn;
     double lastsync = mSync;
-    double w        = std::clamp(width, 0.01f, 0.99f);
+    double w        = width < 0.01f ? 0.01f : width > 0.99f ? 0.99f : width;
     double step     = freq * rateinv;
     double step2    = 2.f*step;
     double step3    = 3.f*step;
@@ -773,7 +773,7 @@ void PulsePTR::next_kkka(int nSamples) {
     double p2       = samples * samples / 2.f;
     double p3       = samples * samples * samples / 6.f;
     for (int i = 0; i < nSamples; ++i) {
-        double w        = std::clamp(width[i], 0.01f, 0.99f);
+        double w        = width[i] < 0.01f ? 0.01f : width[i] > 0.99f ? 0.99f : width[i];
         double out1     = 0.f;
         double out2     = 0.f;
         if (sync > 0.f && lastsync == 0.f) {
@@ -813,7 +813,7 @@ void PulsePTR::next_kkkk(int nSamples) {
     double rateinv  = 1 / sampleRate();
     double phasein  = mPhaseIn;
     double lastsync = mSync;
-    double w        = std::clamp(width, 0.01f, 0.99f);
+    double w        = width < 0.01f ? 0.01f : width > 0.99f ? 0.99f : width;
     double step     = freq * rateinv;
     double step2    = 2.f*step;
     double step3    = 3.f*step;
